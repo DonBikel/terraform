@@ -1,0 +1,1 @@
+PUBLIC IP: 35.173.170.118 ID: i-0956b0848eccb0fc6 AZ: us-east-1c 

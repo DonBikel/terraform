@@ -1,0 +1,1 @@
+PUBLIC IP: 54.211.32.228 ID: i-04c16df6ae480cbed AZ: us-east-1a 

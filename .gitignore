@@ -1,0 +1,9 @@
+.secrets/
+terraform.pdf
+tp-2/
+tp3/.*
+tp4/.*
+tp5/.*
+tp6/.*
+tp6/dev/.*
+tp6/prod/.*

@@ -1,0 +1,1 @@
+PUBLIC IP: 3.87.216.97 ID: i-00e144b07166363f5 AZ: us-east-1c 
