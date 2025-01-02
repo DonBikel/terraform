@@ -3,7 +3,7 @@ locals {
   aws_common_tag = {
     Name = "mini-projet"
   }
-  region = "us-east-1"
   size = 10
-  AZ        = "us-east-1a"
+  AZ        = "us-east-1a"  
+  key_pair_key_name = "my-dynamic-key"  
 }
