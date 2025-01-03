@@ -16,3 +16,8 @@ variable "security_groups" {
   type    = set(string)
   default = null
 }
+
+variable "key_name" {
+  description = "Nom de la paire de clés à créer dans AWS"
+  type        = string
+}
