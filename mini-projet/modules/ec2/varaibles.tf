@@ -21,3 +21,8 @@ variable "key_name" {
   description = "Nom de la paire de clés à créer dans AWS"
   type        = string
 }
+
+variable "AZ" {
+  type    = string
+  default = "us-east-1a"
+}

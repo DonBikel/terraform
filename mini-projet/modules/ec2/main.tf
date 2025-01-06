@@ -16,4 +16,5 @@ resource "aws_instance" "myec2" {
   key_name        = var.key_name
   tags            = var.aws_common_tag
   security_groups = var.security_groups
+  availability_zone = var.AZ
 }

@@ -9,7 +9,7 @@ terraform {
 }
 
 provider "aws" {
-  region                   = local.AZ
+  region                   = local.region
   shared_credentials_files = ["../../.secrets/credentials"]
   profile                  = "default"
 }
@@ -24,6 +24,7 @@ module "ec2" {
   aws_common_tag  = local.aws_common_tag
   key_name        = local.key_pair_key_name
   security_groups = [module.sg.aws_security_group_name]
+  AZ              = local.AZ
 }
 
 module "eip" {
@@ -53,15 +54,15 @@ resource "aws_eip_association" "eip_assoc" {
   allocation_id = module.eip.aws_eip_id
 }
 
-resource "ip_resource" "name" {
+resource "null_resource" "ip_resource" {
   depends_on = [module.eip]
   provisioner "local-exec" {
     command = "echo PUBLIC IP: ${module.eip.aws_eip_ip} DNS: ${module.eip.aws_eip_domaine_name} > jenkins_ec2.txt"
   }
 }
 
-resource "install_jenkins_resource" "name" {
-  depends_on = [module.key_pair]
+resource "null_resource" "install_jenkins_resource" {
+  depends_on = [module.key_pair, module.eip]
 
   provisioner "remote-exec" {
     inline = [
@@ -77,7 +78,7 @@ resource "install_jenkins_resource" "name" {
       type        = "ssh"
       user        = "ubuntu"
       private_key = file(module.key_pair.private_key_path)
-      host        = self.public_ip
+      host        = module.eip.aws_eip_ip
     }
   }
 }

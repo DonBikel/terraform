@@ -6,5 +6,5 @@ variable "size" {
 
 variable "AZ" {
   type    = string
-  default = "us-east-1b"
+  default = "us-east-1a"
 }

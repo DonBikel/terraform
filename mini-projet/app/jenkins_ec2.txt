@@ -1,1 +1,1 @@
-PUBLIC IP: eipalloc-091aa20abaefafc15 DNS: vpc 
+PUBLIC IP: 3.232.135.74 DNS: vpc 
