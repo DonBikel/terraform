@@ -20,11 +20,13 @@ Considering you just have cloned this repository, you have to follow those steps
   * cd ./app
   * terraform init 
  You must have this result in your terminal
+
  ![transform init OK](https://github.com/user-attachments/assets/f7da816b-27a1-4cce-9372-7d5b93501cad)
 
 2 - Execute terraform plan 
   * terraform plan
 You must have this result in your terminal
+
 ![terraform plan OK](https://github.com/user-attachments/assets/cc5212a1-098b-483b-8abf-2eb6930e820e)
 ![terraform plan OK 2](https://github.com/user-attachments/assets/29fda3a9-a1cb-49fc-b96f-e6cb451e1b4c)
 
@@ -32,6 +34,7 @@ You must have this result in your terminal
   * terraform apply
   * write "Yes" to validate
 You must have this result in your terminal
+
 ![terraform apply OK](https://github.com/user-attachments/assets/31a3e67f-6ed9-4052-8837-5597748f1135)
 ![terraform apply OK 2](https://github.com/user-attachments/assets/017cf598-50dd-4137-a22e-c626356438ea)
 
