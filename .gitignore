@@ -10,3 +10,5 @@ tp6/prod/.*
 mini-projet-commun/app/.*
 mini-projet/app/.*
 mini-projet/.ssh
+mini-projet/app/terraform.tfstate
+mini-projet/app/terraform.tfstate.backup
